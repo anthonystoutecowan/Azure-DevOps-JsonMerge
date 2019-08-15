@@ -1,0 +1,41 @@
+{
+  "name": "jsonmerge",
+  "version": "1.0.0",
+  "description": "azure pipeline task that merge multiple json together",
+  "main": "index.js",
+  "scripts": {
+    "init": "tsc --init",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RingoKam/JsonMerge.git"
+  },
+  "keywords": [
+    "azure",
+    "devops",
+    "task",
+    "ci/cd"
+  ],
+  "author": "Ringo Kam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RingoKam/JsonMerge/issues"
+  },
+  "homepage": "https://github.com/RingoKam/JsonMerge#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^24.0.17",
+    "@types/node": "^12.7.2",
+    "@types/q": "^1.5.2",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.8.0",
+    "fs-extra": "^8.1.0",
+    "q": "^1.5.1"
+  }
+}
