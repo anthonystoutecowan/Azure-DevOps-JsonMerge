@@ -8,10 +8,10 @@ async function mergeFile(targetFile: string, sourceFiles: string[]): Promise<str
     try {
         //Input Validation
         if(!targetFile) {
-            throw "targetFile cannot be null or empty!!!";
+            throw new Error("targetFile cannot be null or empty!!!");
         }
-        if(!sourceFiles) {
-            throw "sourceFile(s) should not be null or empty!!!"
+        if(!sourceFiles || sourceFiles.length < 1) {
+            throw new Error("sourceFile(s) should not be null or empty!!!");
         }
         const [targetJson, ...sourceJson] = await fs.resolveFileInjson([targetFile, ...sourceFiles]);
         const finalJson = Object.assign(targetJson, ...sourceJson);
