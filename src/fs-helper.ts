@@ -6,6 +6,7 @@ async function resolveFileInjson(filePaths: string[]): Promise<any[]> {
         const fileObject = filePaths
             .map(filePath => nodePath.resolve(filePath))
             .map(filePath => fse.readJSON(filePath));
+        
         return fileObject;
     } catch (error) {
         throw error;
