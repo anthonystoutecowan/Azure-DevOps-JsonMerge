@@ -1,18 +1,22 @@
-test("mergeFile with empty target file will fail", () => {
-    const mergeJson = require("./merge-json");
+describe("mergeFile Input validation", () => {
 
-    const result = mergeJson.mergeFile(null, ["alright.json"]);
-    return expect(result).rejects.toThrow("targetFile cannot be null or empty!!!")
-});
+    test("empty target file will fail", () => {
+        const mergeJson = require("./merge-json");
+    
+        const result = mergeJson.mergeFile(null, ["alright.json"]);
+        return expect(result).rejects.toThrow("targetFile cannot be null or empty!!!")
+    });
+    
+    test("empty source file(s) will fail", () => {
+        const mergeJson = require("./merge-json");
+    
+        const result = mergeJson.mergeFile("test.json", []);
+        return expect(result).rejects.toThrow("sourceFile(s) should not be null or empty!!!")
+    });
 
-test("mergeFile with empty source file(s) will fail", () => {
-    const mergeJson = require("./merge-json");
+})
 
-    const result = mergeJson.mergeFile("test.json", []);
-    return expect(result).rejects.toThrow("sourceFile(s) should not be null or empty!!!")
-});
-
-describe("mergeFile will merge correctly", () => {
+describe("mergeFile", () => {
 
     beforeEach(() => {
         jest.resetModules(); //need that if require json was done before 
@@ -35,7 +39,7 @@ describe("mergeFile will merge correctly", () => {
         })
     })
 
-    test("1 file", () => {
+    test("1 file will merge correctly", () => {
         //setup
         const mergeJson = require("./merge-json");
 

@@ -6,7 +6,8 @@
   "scripts": {
     "init": "tsc --init",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "testCoverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
