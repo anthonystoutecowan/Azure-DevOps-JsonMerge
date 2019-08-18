@@ -10,22 +10,13 @@ describe("FS Helper Test", ()=>{
         const spy = jest.spyOn(fse, "readJSON");
         spy.mockImplementation(file => file);
         const fsHeper = require("./fs-helper");
-        const result = await fsHeper.resolveFileInjson(["1", "2", "3", "4", "5"]);
-        expect(spy).toBeCalledTimes(5);
+        const result = await fsHeper.resolveFileInjson(["./testFiles/test.json", "./testFiles/test1.json", "./testFiles/test2.json"]);
+        expect(spy).toBeCalledTimes(3);
     })
 
-    // test("path Resolve 5 name will be run 5 times", async () => {
-    //     const fse = jest.mock("fs-extra", () => {
-    //         function readJson (f: string ) { return f;}
-    //         return {
-    //             readJson
-    //         }
-    //     });
-    //     const path = require("path");        
-    //     const spy = jest.spyOn(path, "resolve");
-    //     spy.mockImplementation(file => file);
-    //     const fsHeper = require("./fs-helper");
-    //     const result = await fsHeper.resolveFileInjson(["1", "2", "3", "4", "5"]);
-    //     expect(spy).toBeCalledTimes(5);
-    // })
+    test("readJson will read the # of files correctly", async () => {
+        const fsHeper = require("./fs-helper");
+        const result = await fsHeper.resolveFileInjson(["./testFiles/test.json", "./testFiles/test1.json", "./testFiles/test2.json"]);
+        expect(JSON.stringify(result)).toBe(3);
+    })
 })

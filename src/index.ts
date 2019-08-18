@@ -1,5 +1,5 @@
 import tl = require("azure-pipelines-task-lib");
-import mergeJson = require("./task/merge-json");
+const mergeJson = require("./task/merge-json");
 
 async function run() {
     try {
@@ -7,8 +7,8 @@ async function run() {
         tl.debug("Task [Merge JSON] Started 🔥");
         writeBreak();
 
-        const target = tl.getInput("target", true);
-        const sources = tl.getInput("sources", true).split(",");
+        const target = tl.getPathInput("target", true);
+        const sources = tl.getDelimitedInput("sources", "\n", true);
         const result = await mergeJson.mergeFile(target, sources);
         tl.debug(`final content is ${result}`);
 
