@@ -1,6 +1,9 @@
 # JsonMerge
 Azure DevOps Task for merging multiple JSON file
 
+## Developing Custom Azure DevOps Task 
+https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?view=azure-devops#createtask
+
 ## TESTING
 Unit Testing with Jest
 
