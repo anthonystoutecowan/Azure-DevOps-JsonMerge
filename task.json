@@ -1,0 +1,38 @@
+{
+    "id": "6a05edd1-b358-4a3b-a2f5-650aa8f94185",
+    "name": "json-merge",
+    "friendlyName": "JSON Merge",
+    "description": "Merge/Transform multiple JSON file into one",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Ringo Kam",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo MergeJSON",
+    "inputs": [
+        {
+            "name": "SourcePath",
+            "type": "filePath",
+            "label": "Source",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Absolute path of the source file"
+        },
+        {
+            "name": "TargetFiles",
+            "type": "filePath",
+            "label": "Target Files",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "path of the target files"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
