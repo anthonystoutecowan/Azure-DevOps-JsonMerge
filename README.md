@@ -1,4 +1,5 @@
-# JsonMerge
+
+# ![alt text](./icon.png "JSON Merge") JSON Merge
 Azure DevOps Task for merging multiple JSON file
 
 ## Developing Custom Azure DevOps Task 
@@ -14,3 +15,8 @@ run test with watch
 
 ### How to debug Test (VSCODE)
 https://jestjs.io/docs/en/troubleshooting
+
+
+
+
+Icons made by https://www.flaticon.com/authors/smashicons
