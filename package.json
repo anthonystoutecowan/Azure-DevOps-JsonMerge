@@ -1,17 +1,17 @@
 {
-  "name": "jsonmerge",
+  "name": "Azure-DevOps-JsonMerge",
   "version": "1.0.0",
   "description": "azure pipeline task that merge multiple json together",
   "main": "index.js",
   "scripts": {
-    "init": "tsc --init",
+    "build": "",    
     "test": "jest",
     "test:watch": "jest --watch",
     "testCoverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RingoKam/JsonMerge.git"
+    "url": "git+https://github.com/RingoKam/Azure-DevOps-JsonMerge.git"
   },
   "keywords": [
     "azure",
