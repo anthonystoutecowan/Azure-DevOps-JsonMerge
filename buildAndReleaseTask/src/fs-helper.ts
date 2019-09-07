@@ -14,7 +14,7 @@ async function resolveFileInjson(filePaths: string[]): Promise<any[]> {
 
 async function writeJson(targetFilePath: string, jsonObject: Object): Promise<void> {
     try {
-        return fse.writeFile(targetFilePath, jsonObject);
+        return fse.writeFile(targetFilePath, JSON.stringify(jsonObject));
     } catch(error) {
         throw error;
     }

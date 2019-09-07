@@ -7,8 +7,8 @@ async function run() {
         tl.debug("Task [Merge JSON] Started 🔥");
         writeBreak();
 
-        const target = tl.getPathInput("target", true);
-        const sources = tl.getDelimitedInput("sources", "\n", true);
+        const target = tl.getPathInput("SourcePath", true);
+        const sources = tl.getDelimitedInput("TargetFiles", "\n", true);
         const result = await mergeJson.mergeFile(target, sources);
         tl.debug(`final content is ${result}`);
 
