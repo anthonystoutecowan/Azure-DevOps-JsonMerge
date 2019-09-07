@@ -7,9 +7,9 @@
     "category": "Utility",
     "author": "Ringo Kam",
     "version": {
-        "Major": 0,
-        "Minor": 1,
-        "Patch": 0
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 5
     },
     "instanceNameFormat": "Echo MergeJSON",
     "inputs": [
@@ -32,7 +32,7 @@
     ],
     "execution": {
         "Node": {
-            "target": "index.js"
+            "target": "bin/index.js"
         }
     }
 }
