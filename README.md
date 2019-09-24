@@ -2,6 +2,8 @@
 # ![alt text](./icon.png "JSON Merge") JSON Merge
 Azure DevOps Task for merging multiple JSON file(s)
 
+[Market Place Url](https://marketplace.visualstudio.com/items?itemName=RingoKamNYC.azure-dev-ops-json-merge-task)
+
 ## Testing
 Unit Testing with Jest
 
@@ -19,3 +21,4 @@ https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?view
 https://jestjs.io/docs/en/troubleshooting
 
 Icons made by https://www.flaticon.com/authors/smashicons
+

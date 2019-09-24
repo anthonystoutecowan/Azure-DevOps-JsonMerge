@@ -17,6 +17,11 @@
     "icons": {
         "default": "icon.png"        
     },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
     "files": [
         {
             "path": "buildAndReleaseTask"
