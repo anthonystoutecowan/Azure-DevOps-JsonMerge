@@ -3,9 +3,9 @@
     "name": "json-merge",
     "friendlyName": "JSON Merge",
     "description": "Merge/Transform multiple JSON file into one",
-    "helpMarkDown": "",
+    "helpMarkDown": "Merge/Transform multiple JSON file into one. For more info please see [Github](https://github.com/RingoKam/Azure-DevOps-JsonMerge)",
     "category": "Utility",
-    "author": "Ringo Kam",
+    "author": "RingoKamNYC",
     "version": {
         "Major": 1,
         "Minor": 0,

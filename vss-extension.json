@@ -2,8 +2,9 @@
     "manifestVersion": 1,
     "id": "azure-dev-ops-json-merge-task",
     "name": "JsonMerge",
-    "version": "1.0.9",
-    "publisher": "RingoKam",
+    "version": "1.0.10",
+    "publisher": "RingoKamNYC",
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
