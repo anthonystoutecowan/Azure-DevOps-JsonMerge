@@ -9,7 +9,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 8
+        "Patch": 9
     },
     "instanceNameFormat": "Echo MergeJSON",
     "inputs": [
@@ -23,11 +23,11 @@
         },
         {
             "name": "TargetFiles",
-            "type": "filePath",
+            "type": "multiLine",
             "label": "Target Files",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "path of the target files"
+            "helpMarkDown": "Path of the target files, Supports multiple lines"
         }
     ],
     "execution": {
