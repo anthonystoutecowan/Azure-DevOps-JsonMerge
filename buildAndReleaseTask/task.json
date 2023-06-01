@@ -5,7 +5,7 @@
     "description": "Merge/Transform multiple JSON file into one",
     "helpMarkDown": "Merge/Transform multiple JSON file into one. For more info please see [Github](https://github.com/RingoKam/Azure-DevOps-JsonMerge)",
     "category": "Utility",
-    "author": "RingoKamNYC",
+    "author": "RingoKamNYC and CowanSystems",
     "version": {
         "Major": 1,
         "Minor": 2,
@@ -14,20 +14,20 @@
     "instanceNameFormat": "Echo MergeJSON",
     "inputs": [
         {
-            "name": "SourcePath",
+            "name": "DestPath",
             "type": "filePath",
-            "label": "Source",
+            "label": "Destination File",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Absolute path of the source file"
+            "helpMarkDown": "Absolute path of the file to write"
         },
         {
-            "name": "TargetFiles",
+            "name": "SourceFiles",
             "type": "multiLine",
-            "label": "Target Files",
+            "label": "Source Files",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Path of the target files, Supports multiple lines and patterns"
+            "helpMarkDown": "Path of the source files, Supports multiple lines and patterns"
         }
     ],
     "execution": {

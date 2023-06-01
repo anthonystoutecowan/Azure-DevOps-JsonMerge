@@ -8,10 +8,12 @@ async function run() {
         tl.debug("Task [Merge JSON] Started 🔥");
         writeBreak();
 
-        const sources = tl.getPathInput("SourcePath", true);
-        const target = tl.getDelimitedInput("TargetFiles", "\n", true);
-        const matchedFiles = await glob.glob(target);
-        const result = await mergeJson.mergeFile(matchedFiles, sources);
+        const target = tl.getPathInput("DestPath", true);
+        const sources = tl.getDelimitedInput("SourceFiles", "\n", true);
+        const matchedFiles = await glob.glob(sources);
+        var patterns = sources.reduce((r, p, i) => r + (i != sources.length ? ", " : ""); )
+        tl.debug(`Found ${matchedFiles.length} files matching the patterns ${patterns}`);
+        const result = await mergeJson.mergeFile(matchedFiles, target);
         tl.debug(`final content is ${result}`);
 
         writeBreak();
