@@ -14,10 +14,17 @@ async function resolveFileInjson(filePaths: string[]): Promise<any[]> {
 
 async function writeJson(targetFilePath: string, jsonObject: Object): Promise<void> {
     try {
-        if (!fse.existsSync(targetFilePath)){
-            fse.mkdirSync(targetFilePath, { recursive: true });
+        if (!fse.existsSync(nodePath.dirname(targetFilePath))){
+            fse.mkdirSync(nodePath.dirname(targetFilePath), { recursive: true });
         }
-        return fse.writeFile(targetFilePath, JSON.stringify(jsonObject));
+        var jsonString: String = "";
+        if (typeof jsonObject === 'string' || jsonObject instanceof String) {
+            jsonString = jsonObject;
+        }
+        else {
+            jsonString = JSON.stringify(jsonObject, null, 2);
+        }
+        return fse.writeFile(targetFilePath, jsonString);
     } catch(error) {
         throw error;
     }

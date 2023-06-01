@@ -1,5 +1,5 @@
 {
-    "id": "6a05edd1-b358-4a3b-a2f5-650aa8f94185",
+    "id": "b7f8389b-1ddc-47e8-8fec-7e5b78695026",
     "name": "json-merge",
     "friendlyName": "JSON Merge",
     "description": "Merge/Transform multiple JSON file into one",
@@ -8,7 +8,7 @@
     "author": "RingoKamNYC",
     "version": {
         "Major": 1,
-        "Minor": 0,
+        "Minor": 2,
         "Patch": 9
     },
     "instanceNameFormat": "Echo MergeJSON",
@@ -27,7 +27,7 @@
             "label": "Target Files",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Path of the target files, Supports multiple lines"
+            "helpMarkDown": "Path of the target files, Supports multiple lines and patterns"
         }
     ],
     "execution": {
