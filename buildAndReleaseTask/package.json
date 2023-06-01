@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/fs-extra": "^8.0.0",
     "@types/jest": "^24.0.17",
-    "@types/node": "^12.7.2",
+    "@types/node": "^12.20.55",
     "@types/q": "^1.5.2",
     "jest": "^24.8.0",
     "tfx-cli": "^0.7.9",
@@ -40,6 +40,7 @@
   "dependencies": {
     "azure-pipelines-task-lib": "^2.8.0",
     "fs-extra": "^8.1.0",
+    "glob": "^10.2.6",
     "q": "^1.5.1"
   }
 }

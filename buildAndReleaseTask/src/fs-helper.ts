@@ -1,5 +1,5 @@
-const fse = require("fs-extra");
-const nodePath = require("path");
+import fse = require("fs-extra");
+import nodePath = require("path");
 
 async function resolveFileInjson(filePaths: string[]): Promise<any[]> {
     try {
@@ -14,6 +14,9 @@ async function resolveFileInjson(filePaths: string[]): Promise<any[]> {
 
 async function writeJson(targetFilePath: string, jsonObject: Object): Promise<void> {
     try {
+        if (!fse.existsSync(targetFilePath)){
+            fse.mkdirSync(targetFilePath, { recursive: true });
+        }
         return fse.writeFile(targetFilePath, JSON.stringify(jsonObject));
     } catch(error) {
         throw error;
