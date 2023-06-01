@@ -3,7 +3,7 @@
     "id": "azure-dev-ops-json-merge-task",
     "name": "JsonMerge",
     "version": "1.0.10",
-    "publisher": "RingoKamNYC",
+    "publisher": "CowanSystems",
     "public": true,
     "targets": [
         {
